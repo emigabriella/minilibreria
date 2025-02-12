@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- partial:parts/_head.html -->
+    <meta charset="utf-8">
+    <title>Estacion Creativa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="images/logo-4.png" rel="shortcut icon" type="image/x-icon" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <div id="loader">
+        <img src="images/logo-4.png" alt="Cargando...">
+    </div>
+
+    <div id="wrapper" class="wrapper">
+        
+        <!-- Encabezado en donde aparecen las opciones para navegar entre el sitio -->
+        <header id="header" class="header">
+            <div class="container">
+                <!-- logo -->
+                <div class="site-logo">
+                    <a href="index.html" class="site-logo__link">
+                        <picture>
+                            <source media="(max-width: 76px)" srcset="images/logo-mob.png">
+                            <source srcset="images/logo-4.png">
+                            <img class="site-logo__img" src="images/logo-4.png" alt="logo"/>
+                        </picture>
+                    </a>
+                </div>
+                <!-- Listas -->
+                <div class="header-mobile">
+                    <div class="header-nav">
+                        <div class="nav-toggle"><span class="nav-toggle__link"></span><span class="nav-toggle__link"></span>
+                            <span class="nav-toggle__link"></span>
+                        </div>
+                        <div class="header-nav__container">
+                            <div class="header-nav__menu">
+                                <nav class="nav">
+                                    <ul class="nav__list">
+                                        <li class="nav__item"><a href="#categorias" class="nav__link">Categorias</a></li>
+                                        <li class="nav__item"><a href="#recomendado" class="nav__link">Recomendado</a></li>
+                                        <li class="nav__item"><a href="#contactos" class="nav__link">Contactos</a></li>
+                                        <li class="nav__item"><a href="#quienes-somos" class="nav__link">Quienes Somos</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenedor general -->
+        <main id="main" class="main">
+
+            <!--presentacion-->
+            <section class="section main-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="presentacion-img">Imagen de presentación</div>  
+                    </div>
+                </div>
+            </section>
+
+            <!--categorias-->
+            <section class="categorias" id="categorias">
+                <h2>CATEGORÍAS</h2>
+                <div class="categorias-container">
+                    <div class="categoria">
+                        <div class="imagen">
+                            <img src="./images/Categorias/escolares.PNG" class="img-escolares">
+                        </div>
+                        <div class="texto azul">
+                            <div class="main-container">
+                                Escolares
+                                
+                                <!-- <a type="button" class="btn popup-init" data-popupname="location-popup">Escolares</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categoria">
+                        <div class="imagen">
+                            <img src="./images/Categorias/oficina.PNG" class="img-oficina">
+                        </div>
+                        <div class="texto verde">
+                            <div class="main-container">
+                                Oficina
+                                <!-- <button type="button" class="btn popup-init" data-popupname="location-popup">Oficina</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categoria">
+                        <div class="imagen">
+                            <img src="./images/Categorias/manualidades.JPG" class="img-manualidades">
+                        </div>
+                        <div class="texto amarillo">
+                            <div class="main-container">
+                                Manualidades
+                                <!-- <button type="button" class="btn popup-init" data-popupname="location-popup">Manualidades</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categoria">
+                        <div class="imagen">
+                            <img src="./images/Categorias/mas.PNG" class="img-mas">
+                        </div>
+                        <div class="texto azul-oscuro">
+                            <div class="main-container">
+                                Y más
+                                <!-- <button type="button" class="btn popup-init" data-popupname="location-popup"> Y mas</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- Modal -->
+            <div id="modalCategoria" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-body">
+                        <div class="tarjeta-container">
+                            <!-- Tarjetas dinámicas -->
+                    </div>
+                        <!-- Botón Enviar -->
+                        <button>Enviar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recomendado -->
+            <section id="recomendado" class="recomendado">
+                <div class="container-recomendados">
+                    <div class="row">
+                        <div class="col col_3 col_desktop-12"></div>
+                        <div class="col col_6 col_desktop-12">
+                            <div class="post-description text-center text-mob-left">
+                                    <h2>RECOMENDADO</h2>
+                            </div>
+                        </div>
+                        <div class="col col_3 col_desktop-12"></div>
+                    </div>
+                    <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true" grab-cursor="true" centered-slides="true"
+                    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+                    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/crayones.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Escolar</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Crayones</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/folder.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Escolar</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Folder</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/pega.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Escolar</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Pega</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/plumones.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Escolar</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Manualidades</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/sobremanila.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Oficina</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Sobre manila</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide> 
+                            <div class="swiper-recomendado">
+                                <div class="imagen-recomendado swiper-img"> 
+                                    <img src="images/Recomendados/temperas.PNG" alt="main-page-7" class="swipe-img-crayones"> 
+                                </div> 
+                                <div class="swiper-img-detail"> 
+                                    <div class="swiper-text-categoria"> 
+                                        <p>Manualidades</p> 
+                                    </div> 
+                                    <div class="swiper-text-producto"> 
+                                        <p>Temperas</p> 
+                                    </div> 
+                                </div> 
+                            </div>
+                        </swiper-slide>
+                    </swiper-container>
+
+                    
+
+                    <!-- <div class="post-slider slider" style="margin-bottom: 50px">
+                        <div class="swiper-container post-slider__container">
+                            <div class="swiper-wrapper post-slider__wrapper">
+                                <div class="swiper-slide slider-item post-slider__item">
+                                    <div class="post-slider__image">
+                                        <img src="images/content/main-page-7.jpg" alt="main-page-7">
+                                    </div>
+                                    <div class="post-slider__info">
+                                        <h3 class="h3 title">Lemon macaroon</h3>
+                                        <div class="wysiwyg">
+                                            <p>Placerat vitae ullamcorper in amet convallis dignissim lacus, aenean. Magna mollis sit odio sit aliquet facilisi. </p>
+                                        </div>
+                                        <div class="display-flex justify-between align-center flex-wrap">
+                                            <div class="prise">
+                                                $24
+                                                <span class="pieces">
+                                                for 16 pieces
+                                            </span>
+                                            </div>
+                                            <button type="button" class="btn btn_secondary">order now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slider-item post-slider__item">
+                                    <div class="post-slider__image">
+                                        <img src="images/content/main-page-8.jpg" alt="main-page-8">
+                                    </div>
+                                    <div class="post-slider__info">
+                                        <h3 class="h3 title">Lemon macaroon</h3>
+                                        <div class="wysiwyg">
+                                            <p>Placerat vitae ullamcorper in amet convallis dignissim lacus, aenean. Magna mollis sit odio sit aliquet facilisi. </p>
+                                        </div>
+                                        <div class="display-flex justify-between align-center flex-wrap">
+                                            <div class="prise">
+                                                $24
+                                                <span class="pieces">
+                                                for 16 pieces
+                                            </span>
+                                            </div>
+                                            <button type="button" class="btn btn_secondary">order now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slider-item post-slider__item">
+                                    <div class="post-slider__image">
+                                        <img src="images/content/main-page-9.jpg" alt="main-page-9">
+                                    </div>
+                                    <div class="post-slider__info">
+                                        <h3 class="h3 title">Lemon macaroon</h3>
+                                        <div class="wysiwyg">
+                                            <p>Placerat vitae ullamcorper in amet convallis dignissim lacus, aenean. Magna mollis sit odio sit aliquet facilisi. </p>
+                                        </div>
+                                        <div class="display-flex justify-between align-center flex-wrap">
+                                            <div class="prise">
+                                                $24
+                                                <span class="pieces">
+                                                for 16 pieces
+                                            </span>
+                                            </div>
+                                            <button type="button" class="btn btn_secondary">order now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slider-item post-slider__item">
+                                    <div class="post-slider__image">
+                                        <img src="images/content/main-page-10.jpg" alt="main-page-10">
+                                    </div>
+                                    <div class="post-slider__info">
+                                        <h3 class="h3 title">Lemon macaroon</h3>
+                                        <div class="wysiwyg">
+                                            <p>Placerat vitae ullamcorper in amet convallis dignissim lacus, aenean. Magna mollis sit odio sit aliquet facilisi. </p>
+                                        </div>
+                                        <div class="display-flex justify-between align-center flex-wrap">
+                                            <div class="prise">
+                                                $24
+                                                <span class="pieces">
+                                                for 16 pieces
+                                            </span>
+                                            </div>
+                                            <button type="button" class="btn btn_secondary">order now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination slider-pagination  post-slider__pagination"></div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- Contactos -->
+            <section id="contactos" class="contactos">
+                <h2>CONTACTOS</h2>
+                <div class="iconos">
+                    <div class="icono"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="icono"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="icono"><i class="fa-solid fa-location-dot"></i></div>
+                </div>
+            </section>
+
+            <!-- Quienes somos -->
+            <section class="quienes-somos" id="quienes-somos">
+                <h2>QUIÉNES SOMOS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </section>
+
+
+
+        </main>
+        
+        <!-- Pie de página -->
+        <footer class="footer">
+            <picture>
+                <source media="(max-width: 76px)" srcset="images/logo.png">
+                <img class="site-logo__img" src="images/logo-4.png" alt="logo" style="width: 80px; height: auto;"/>
+            </picture>
+            <div class="redes">
+                <span><i class="fa-brands fa-instagram"></i></span>
+                <span><i class="fa-brands fa-whatsapp"></i></span>
+                <span><i class="fa-solid fa-location-dot"></i></span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/libs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+       
+    </div>
+</body>
+</html>
+
+
